@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,650&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>AquaLens — stream health field companion</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="page" id="landingView">
+      <header class="utility">
+        <div class="protocol">
+          <span class="dot"></span><span>Urban stream field protocol</span>
+        </div>
+        <div class="utility-right">
+          <span class="field-date" id="fieldDate"></span
+          ><a href="#method">How the check works ↓</a>
+        </div>
+      </header>
+      <main>
+        <section class="landing">
+          <div class="intro">
+            <p class="field-tag">
+              One location. Six observations. One honest snapshot.
+            </p>
+            <h1>Read the stream.<em>Not the jargon.</em></h1>
+            <p class="intro-copy">
+              Stand at the water’s edge and tell Lens what you can see, smell
+              and hear. It cross-checks your observations, explains anything
+              unusual, and turns them into a simple Stream Health Score.
+            </p>
+            <div class="cta-row">
+              <button class="primary" data-action="start">
+                Begin a field check <span class="arrow">→</span></button
+              ><button class="sample-link" data-action="sample">
+                View a sample report →</button
+              ><span class="time-note"
+                >About one minute<br />No equipment needed</span
+              >
+            </div>
+          </div>
+          <div
+            class="river-panel"
+            aria-label="Interactive field sketch showing where to look during a stream check"
+          >
+            <svg
+              class="river-art"
+              viewBox="0 0 620 620"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M49 106C166 35 243 128 332 98c100-34 175-10 236 53"
+                stroke="var(--line)"
+                stroke-width="2"
+              />
+              <path
+                d="M-20 360c108-94 194 43 295-26 94-64 154-3 242-67 45-33 92-30 132-8"
+                stroke="var(--water)"
+                stroke-width="56"
+                stroke-linecap="round"
+                opacity=".12"
+              />
+              <path
+                class="flow"
+                d="M-20 346c108-94 194 43 295-26 94-64 154-3 242-67 45-33 92-30 132-8"
+                stroke="var(--water)"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <path
+                class="flow alt"
+                d="M-7 381c104-75 190 43 293-21 91-57 163-4 244-59"
+                stroke="var(--deep)"
+                stroke-width="2"
+                stroke-linecap="round"
+                opacity=".7"
+              />
+              <g transform="translate(84 390) rotate(-8)">
+                <path
+                  d="M0 18Q42-11 83 13Q44 39 0 18Z"
+                  fill="var(--deep)"
+                  opacity=".9"
+                />
+                <path d="m82 13 30-23-2 42Z" fill="var(--deep)" />
+                <circle cx="27" cy="13" r="2.5" fill="var(--paper)" />
+              </g>
+              <g class="dragonfly" transform="translate(458 115)">
+                <path
+                  d="M0 21c-44-13-54-43-25-42 18 1 30 16 38 34M18 18C28-25 56-37 58-8c1 18-13 29-30 36"
+                  stroke="var(--orange)"
+                  stroke-width="7"
+                  stroke-linecap="round"
+                  opacity=".55"
+                />
+                <path
+                  d="M18 2v61"
+                  stroke="var(--ink)"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+                <circle cx="18" cy="-2" r="6" fill="var(--ink)" />
+              </g>
+              <g transform="translate(118 146)">
+                <path
+                  d="M0 70C9 32 38 10 82 0c-7 36-36 66-82 70Z"
+                  fill="var(--water)"
+                  opacity=".2"
+                />
+                <path d="M2 67 69 11" stroke="var(--water)" stroke-width="2" />
+              </g>
+              <g transform="translate(400 430)">
+                <path
+                  d="M0 86C13 38 49 12 104 0c-9 47-45 82-104 86Z"
+                  fill="var(--orange)"
+                  opacity=".22"
+                />
+                <path d="M5 81 88 14" stroke="var(--orange)" stroke-width="2" />
+              </g>
+              <g class="water-pulse" transform="translate(365 322)">
+                <ellipse
+                  cx="0"
+                  cy="0"
+                  rx="43"
+                  ry="14"
+                  stroke="var(--water)"
+                  stroke-width="2"
+                  opacity=".65"
+                />
+                <ellipse
+                  cx="0"
+                  cy="0"
+                  rx="25"
+                  ry="8"
+                  stroke="var(--deep)"
+                  stroke-width="1.5"
+                  opacity=".55"
+                />
+              </g>
+              <g
+                transform="translate(500 365)"
+                stroke="var(--deep)"
+                stroke-width="3"
+                stroke-linecap="round"
+              >
+                <path d="M0 60Q5 26 1 0M13 61Q25 31 31 6M-10 61Q-17 38-24 21" />
+                <path
+                  d="M3 27c12-9 21-9 28-4M-9 42c-10-7-18-7-24-3"
+                  stroke-width="2"
+                />
+              </g>
+              <circle cx="287" cy="154" r="5" fill="var(--orange)" />
+              <path
+                d="M287 154c15 7 27 19 34 35"
+                stroke="var(--orange)"
+                stroke-width="1.5"
+                stroke-dasharray="3 6"
+              />
+            </svg>
+            <div class="pencil"></div>
+            <p class="art-caption">
+              “A stream tells you plenty before a test kit ever comes out.”
+            </p>
+            <p class="cue-note" id="cueNote" aria-live="polite">
+              Start at the bank: can you still see the bottom?
+            </p>
+            <div class="field-cues" aria-label="Field sketch cues">
+              <button class="field-cue" data-cue="clarity" aria-pressed="true">
+                Clarity</button
+              ><button class="field-cue" data-cue="outlet" aria-pressed="false">
+                Outlets</button
+              ><button
+                class="field-cue"
+                data-cue="wildlife"
+                aria-pressed="false"
+              >
+                Wildlife
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="method" id="method">
+          <header class="method-intro">
+            <span class="method-label">The field method</span>
+            <h2>A check that shows its working.</h2>
+            <p>
+              Every score deduction is named in the final result. When two
+              observations clash, the person at the water decides what is
+              true—Lens only points out what deserves another look.
+            </p>
+          </header>
+          <div class="method-steps">
+            <article>
+              <div class="n">01</div>
+              <div>
+                <h3>Observe</h3>
+                <p>
+                  Log the location, then answer six plain-language cues covering
+                  clarity, smell, surface, wildlife, rain and nearby outlets.
+                </p>
+              </div>
+            </article>
+            <article>
+              <div class="n">02</div>
+              <div>
+                <h3>Cross-check</h3>
+                <p>
+                  Eight ecological checks compare water, air, surface, wildlife
+                  and recent rain before the score is made. Keep an answer or
+                  recheck it; that decision appears in the report.
+                </p>
+              </div>
+            </article>
+            <article>
+              <div class="n">03</div>
+              <div>
+                <h3>Act</h3>
+                <p>
+                  Read every deduction, confidence note and One Health next
+                  step—without mistaking a field check for a lab test.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="method-strip">
+            <span
+              ><strong>7-step check</strong> · location + 6 observations</span
+            ><span><strong>8 cross-check patterns</strong></span
+            ><span><strong>Observer resolves every flag</strong></span
+            ><span>Prototype · not a diagnosis or lab result</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <section class="assessment" id="assessmentView" hidden>
+      <aside class="rail">
+        <div class="rail-top">
+          <span class="rail-label">Field check</span
+          ><button
+            class="close"
+            data-action="home"
+            aria-label="Leave field check"
+          >
+            ×
+          </button>
+        </div>
+        <ol class="progress-list" id="progressList"></ol>
+        <p class="rail-note">
+          <strong>Lens says</strong
+          ><span id="lensNote"
+            >Start with what your senses tell you. There are no trick
+            questions.</span
+          >
+        </p>
+      </aside>
+      <main class="stage">
+        <div class="stage-head">
+          <span id="locationEcho">New observation</span
+          ><span class="count" id="stepCount">01 / 07</span>
+        </div>
+        <div class="question-wrap" id="questionWrap"></div>
+        <div class="stage-foot">
+          <button class="nav-btn" id="backBtn">← Back</button
+          ><button class="next" id="nextBtn">Continue →</button>
+        </div>
+      </main>
+    </section>
+    <section class="report-view" id="reportView" hidden>
+      <div class="report-top">
+        <div>
+          <p class="overline">
+            <span id="reportMode">Stream health snapshot</span> ·
+            <span id="reportDate"></span>
+          </p>
+          <h2 id="reportLocation"></h2>
+        </div>
+        <div class="report-actions">
+          <button class="outline" data-action="home">← Overview</button
+          ><button class="primary" data-action="start">
+            Check another spot
+          </button>
+        </div>
+      </div>
+      <div class="report-grid">
+        <section class="score-block">
+          <div class="score-num">
+            <span id="scoreNum">0</span><span>/ 100</span>
+          </div>
+          <div class="grade" id="gradeText"></div>
+          <p class="confidence">
+            Observation confidence · <b id="confidenceText"></b>
+          </p>
+          <div class="conf-line"><span id="confidenceBar"></span></div>
+          <p class="confidence-note" id="confidenceNote"></p>
+          <div class="crosschecks" id="crosschecks"></div>
+        </section>
+        <section class="breakdown">
+          <p class="section-label">How the score was built</p>
+          <div id="reasons"></div>
+        </section>
+      </div>
+      <div class="story">
+        <div class="story-title">
+          <p class="section-label">The One Health reading</p>
+          <h3 id="storyHeading"></h3>
+        </div>
+        <div class="story-copy" id="storyCopy"></div>
+      </div>
+    </section>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
